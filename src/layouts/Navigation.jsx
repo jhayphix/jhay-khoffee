@@ -4,9 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 // .....Assets
 
 const Navigation = () => {
+  const project_name = "jhay-khoffee";
+
   return (
     <div className="container-fluid p-0 nav-bar">
-      <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
+      <nav id="navbar" className="navbar navbar-expand-lg bg-none navbar-dark py-3">
         <Link to="/" className="navbar-brand px-lg-4 m-0">
           <h1 className="m-0 display-4 text-uppercase text-white">J-KHOFFEE</h1>
         </Link>
@@ -25,19 +27,32 @@ const Navigation = () => {
           id="navbarCollapse"
         >
           <div className="navbar-nav ml-auto p-4">
-            <NavLink to="/" className="nav-item nav-link" end={true}>
+            <NavLink
+              to={`/${project_name}/`}
+              className="nav-item nav-link"
+              end={true}
+            >
               Home
             </NavLink>
-            <NavLink to="/about" className="nav-item nav-link">
+            <NavLink
+              to={`/${project_name}/about`}
+              className="nav-item nav-link"
+            >
               About
             </NavLink>
-            <NavLink to="/services" className="nav-item nav-link">
+            <NavLink
+              to={`/${project_name}/services`}
+              className="nav-item nav-link"
+            >
               Service
             </NavLink>
-            <NavLink to="/menu" className="nav-item nav-link">
+            <NavLink to={`/${project_name}/menu`} className="nav-item nav-link">
               Menu
             </NavLink>
-            <NavLink to="/contact" className="nav-item nav-link">
+            <NavLink
+              to={`/${project_name}/contact`}
+              className="nav-item nav-link"
+            >
               Contact
             </NavLink>
           </div>

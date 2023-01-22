@@ -11,14 +11,15 @@ import ContactPage from "../pages/contact/ContactPage";
 // .....Assets
 
 const Routing = () => {
+  const project_name = "jhay-khoffee";
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/services" element={<ServicePage />} />
-      <Route path="/menu" element={<MenuPage />} />
-      <Route path="/contact" element={<ContactPage />} />
+      <Route path={`/${project_name}/`} element={<HomePage />} />
+      <Route path={`/${project_name}/home`} element={<HomePage />} />
+      <Route path={`/${project_name}/about`} element={<AboutPage />} />
+      <Route path={`/${project_name}/services`} element={<ServicePage />} />
+      <Route path={`/${project_name}/menu`} element={<MenuPage />} />
+      <Route path={`/${project_name}/contact`} element={<ContactPage />} />
 
       {/* Not Found */}
       <Route path="*" element="Page not found" />
